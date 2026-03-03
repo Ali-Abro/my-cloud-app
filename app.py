@@ -1,4 +1,5 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
 
@@ -8,7 +9,8 @@ def home():
 
 @app.route("/about")
 def about():
-    return "This is Ali's first cloud deployment."
+    return "This is Zainab's first cloud deployment."
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)

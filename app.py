@@ -1,15 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
 import os
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from my cloud app!"
+    return render_template("index.html")
 
 @app.route("/about")
 def about():
-    return "This is Ali's first cloud deployment."
+    return "This is Zainab's first cloud deployment."
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

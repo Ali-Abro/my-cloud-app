@@ -9,7 +9,7 @@ def home():
 
 @app.route("/about")
 def about():
-    return "This is Zainab's first cloud deployment."
+    return "This is Ali's first cloud deployment."
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
